@@ -4,17 +4,19 @@ namespace ObisConcept\FlowJwtAuth\Security\Authentication\Provider;
 
 use \TYPO3\Flow\Security\Authentication\Provider\AbstractProvider;
 use \TYPO3\Flow\Security\Authentication\TokenInterface;
+use \ObisConcept\FlowJwtAuth\Security\Authentication\Token\JsonWebToken;
 
-class JsonWebToken extends AbstractProvider {
+class JsonWebTokenProvider extends AbstractProvider {
 
-    public function canAuthenticate(TokenInterface $authenticationToken) {
+    public function getTokenClassNames() {
 
-        // @ToDo Check authentication and update provider token
-        if ($authenticationToken->getAuthenticationProviderName() === $this->name) {
-            return true;
-        } else {
-            return false;
-        }
+        return [JsonWebToken::class];
+
+    }
+
+    public function authenticate(TokenInterface $authenticationToken) {
+
+        // @ToDo Authenticate with JWT token
 
     }
 
