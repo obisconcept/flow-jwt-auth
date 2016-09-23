@@ -1,5 +1,5 @@
 {
-  "name": "obisconcept/flowjwt-auth",
+  "name": "obisconcept/flow-jwt-auth",
   "type": "typo3-flow-package",
   "description": "JSON Web Token implementation for the flow framework",
   "license": "MIT",
