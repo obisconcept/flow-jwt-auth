@@ -1,6 +1,6 @@
 <?php
 
-namespace \ObisConcept\FlowJwtAuth\Domain\Model;
+namespace ObisConcept\FlowJwtAuth\Domain\Model;
 
 use \TYPO3\Flow\Annotations as Flow;
 use \Doctrine\ORM\Mapping as ORM;

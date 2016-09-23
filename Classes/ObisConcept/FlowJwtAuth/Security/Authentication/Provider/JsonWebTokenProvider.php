@@ -1,6 +1,6 @@
 <?php
 
-namespace \ObisConcept\FlowJwtAuth\Security\Authentication\Provider;
+namespace ObisConcept\FlowJwtAuth\Security\Authentication\Provider;
 
 use \TYPO3\Flow\Security\Authentication\Provider\AbstractProvider;
 use \TYPO3\Flow\Security\Authentication\TokenInterface;

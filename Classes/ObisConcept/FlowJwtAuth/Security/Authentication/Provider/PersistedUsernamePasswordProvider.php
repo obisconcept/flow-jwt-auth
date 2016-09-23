@@ -1,6 +1,6 @@
 <?php
 
-namespace \ObisConcept\FlowJwtAuth\Security\Authentication\Provider;
+namespace ObisConcept\FlowJwtAuth\Security\Authentication\Provider;
 
 use \TYPO3\Flow\Security\Authentication\Provider\PersistedUsernamePasswordProvider as FlowPersistedUsernamePasswordProvider;
 use \TYPO3\Flow\Security\Authentication\Token\UsernamePassword;

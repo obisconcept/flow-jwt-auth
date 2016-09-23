@@ -1,6 +1,6 @@
 <?php
 
-namespace \ObisConcept\FlowJwtAuth\Security\Authentication\Token;
+namespace ObisConcept\FlowJwtAuth\Security\Authentication\Token;
 
 use \TYPO3\Flow\Annotations as Flow;
 use \TYPO3\Flow\Security\Authentication\Token\AbstractToken;
