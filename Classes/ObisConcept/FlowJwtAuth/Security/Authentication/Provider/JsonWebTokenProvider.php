@@ -23,6 +23,12 @@ class JsonWebTokenProvider extends AbstractProvider {
     protected $persistenceManager;
 
     /**
+     * @var \TYPO3\Flow\Http\RequestHandler
+     * @Flow\Inject
+     */
+    protected $requestHandler;
+
+    /**
      * @return array
      */
     public function getTokenClassNames() {
@@ -38,7 +44,6 @@ class JsonWebTokenProvider extends AbstractProvider {
      */
     public function authenticate(TokenInterface $authenticationToken) {
 
-        // @ToDo Authenticate with JWT token
         if (!($authenticationToken instanceof JsonWebToken)) {
             throw new UnsupportedAuthenticationTokenException('This provider cannot authenticate the given token.', 1217339840);
         }

@@ -56,6 +56,7 @@ class JsonWebToken extends AbstractToken implements SessionlessTokenInterface {
 
         if (!empty($encodedJwt)) {
             $this->credentials['jwt'] = $encodedJwt;
+            $this->setAuthenticationStatus(self::AUTHENTICATION_NEEDED);
         }
 
     }
@@ -78,6 +79,7 @@ class JsonWebToken extends AbstractToken implements SessionlessTokenInterface {
     /**
      * @param string $decodedJwt
      * @param \ObisConcept\FlowJwtAuth\Domain\Model\JsonWebToken $jwt
+     * @return void
      */
     public function updateJwt($decodedJwt = '', $jwt = null) {
 
@@ -89,6 +91,7 @@ class JsonWebToken extends AbstractToken implements SessionlessTokenInterface {
 
             $this->jwtRepository->update($jwt);
             $this->persistenceManager->whitelistObject($jwt);
+            setcookie('token', $encodedJwt);
         }
 
     }
